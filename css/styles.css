@@ -1162,3 +1162,260 @@ button:focus-visible,
   outline-offset:3px;
   border-radius:12px;
 }
+
+/* ============================================================
+   НОВОЕ: КОРЗИНА, ТОСТЫ, СТАТУС, ПРАВАЯ ЧАСТЬ ШАПКИ
+   ============================================================ */
+
+/* Тень хедера при прокрутке (класс .is-scrolled ставит main.js) */
+.header.is-scrolled{
+  box-shadow:var(--shadow-md);
+  border-bottom-color:rgba(212,165,116,.34);
+}
+
+/* Правая часть шапки: меню + кнопка корзины */
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-shrink:0;
+}
+
+/* Кнопка корзины в шапке */
+.cart-btn{
+  position:relative;
+  width:44px;height:44px;
+  display:grid;place-items:center;
+  border-radius:14px;
+  background:rgba(212,165,116,.16);
+  font-size:19px;
+  transition:background-color .25s ease, transform .25s cubic-bezier(.2,.8,.2,1);
+}
+.cart-btn:hover{background:rgba(212,165,116,.3);transform:translateY(-2px)}
+.cart-count{
+  position:absolute;
+  top:-6px;right:-6px;
+  min-width:22px;height:22px;
+  padding:0 6px;
+  display:grid;place-items:center;
+  border-radius:999px;
+  background:var(--caramel-dark);
+  color:#FFF8F0;
+  font-size:12px;
+  font-weight:800;
+  box-shadow:0 4px 10px rgba(184,134,90,.45);
+  animation:bump .3s cubic-bezier(.2,.8,.2,1);
+}
+.cart-count[hidden]{display:none}
+@keyframes bump{
+  0%{transform:scale(.4)}
+  60%{transform:scale(1.25)}
+  100%{transform:scale(1)}
+}
+
+/* Фолбэк для пользователей без JavaScript */
+.menu-fallback{
+  grid-column:1 / -1;
+  text-align:center;
+  color:rgba(74,52,40,.68);
+  font-size:15px;
+  padding:24px 0;
+}
+
+/* Тосты-уведомления */
+.toasts{
+  position:fixed;
+  left:50%;
+  bottom:26px;
+  transform:translateX(-50%);
+  width:min(430px,calc(100vw - 32px));
+  z-index:400;
+  display:grid;
+  gap:10px;
+  pointer-events:none;
+}
+.toast{
+  pointer-events:auto;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:var(--espresso);
+  color:#FFF6EA;
+  font-size:14.5px;
+  font-weight:600;
+  line-height:1.45;
+  padding:15px 20px;
+  border-radius:16px;
+  box-shadow:0 18px 40px rgba(44,30,20,.38);
+  animation:toast-in .38s cubic-bezier(.2,.8,.2,1);
+}
+.toast.is-hide{animation:toast-out .32s ease forwards}
+@keyframes toast-in{
+  from{opacity:0;transform:translateY(14px) scale(.96)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes toast-out{
+  to{opacity:0;transform:translateY(10px) scale(.97)}
+}
+
+/* Дровер корзины */
+.cart{position:fixed;inset:0;z-index:300;visibility:hidden}
+.cart.is-open{visibility:visible}
+.cart-backdrop{
+  position:absolute;inset:0;
+  background:rgba(44,30,20,.5);
+  opacity:0;
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter:blur(3px);
+  transition:opacity .35s ease;
+}
+.cart.is-open .cart-backdrop{opacity:1}
+.cart-panel{
+  position:absolute;
+  top:0;right:0;
+  height:100%;
+  width:min(430px,94vw);
+  display:flex;
+  flex-direction:column;
+  background:var(--milk);
+  box-shadow:-24px 0 60px rgba(44,30,20,.25);
+  transform:translateX(102%);
+  transition:transform .45s cubic-bezier(.2,.8,.2,1);
+}
+.cart.is-open .cart-panel{transform:translateX(0)}
+.cart-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:22px 26px;
+  border-bottom:1px solid rgba(212,165,116,.25);
+}
+.cart-head h3{font-size:20px}
+.cart-close{
+  width:38px;height:38px;
+  display:grid;place-items:center;
+  border-radius:12px;
+  background:rgba(212,165,116,.16);
+  font-size:15px;
+  font-weight:800;
+  color:var(--espresso);
+  transition:background-color .25s ease, transform .3s ease;
+}
+.cart-close:hover{background:rgba(212,165,116,.32);transform:rotate(90deg)}
+.cart-list{
+  flex:1;
+  overflow-y:auto;
+  padding:8px 26px 20px;
+  overscroll-behavior:contain;
+}
+.cart-empty{
+  padding:40px 26px;
+  text-align:center;
+  color:rgba(74,52,40,.65);
+  font-size:15px;
+  line-height:1.6;
+}
+.cart-empty[hidden]{display:none}
+.cart-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px 0;
+  border-bottom:1px dashed rgba(184,134,90,.3);
+}
+.cart-item-emoji{
+  width:46px;height:46px;
+  flex-shrink:0;
+  display:grid;place-items:center;
+  font-size:22px;
+  border-radius:14px;
+  background:linear-gradient(140deg,#F9E9D5,#EBD3B4);
+}
+.cart-item-info{flex:1;min-width:0}
+.cart-item-name{
+  font-weight:800;
+  font-size:15px;
+  color:var(--espresso);
+  line-height:1.3;
+}
+.cart-item-price{font-size:13px;font-weight:600;color:rgba(74,52,40,.6);margin-top:2px}
+.cart-item-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:10px;
+}
+.cart-qty{display:flex;align-items:center;gap:8px}
+.cart-qty button{
+  width:28px;height:28px;
+  display:grid;place-items:center;
+  border-radius:9px;
+  background:rgba(212,165,116,.16);
+  font-size:15px;
+  font-weight:800;
+  color:var(--espresso);
+  transition:background-color .2s ease, transform .2s ease;
+}
+.cart-qty button:hover{background:rgba(212,165,116,.34)}
+.cart-qty button:active{transform:scale(.92)}
+.cart-qty-num{min-width:22px;text-align:center;font-weight:800;font-size:14.5px}
+.cart-item-remove{
+  background:none;
+  color:rgba(74,52,40,.5);
+  font-size:12.5px;
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  transition:color .2s ease;
+}
+.cart-item-remove:hover{color:#B84A3A}
+.cart-item-sum{
+  font-weight:800;
+  font-size:15.5px;
+  color:var(--espresso);
+  white-space:nowrap;
+}
+.cart-foot{
+  padding:20px 26px 26px;
+  border-top:1px solid rgba(212,165,116,.25);
+  display:grid;
+  gap:14px;
+}
+.cart-total{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  font-size:16.5px;
+  color:var(--coffee-dark);
+  font-weight:700;
+}
+.cart-total strong{font-size:21px;color:var(--espresso)}
+.cart-checkout{width:100%}
+.cart-checkout:disabled{
+  opacity:.55;
+  cursor:not-allowed;
+  transform:none;
+  box-shadow:none;
+}
+
+/* Блокировка прокрутки при открытой корзине */
+.no-scroll{overflow:hidden}
+
+/* Статус «закрыто» */
+.open-badge--closed{
+  background:rgba(111,78,55,.12);
+  border-color:rgba(74,52,40,.28);
+  color:var(--coffee-dark);
+}
+.open-badge--closed .dot{background:#9A8474}
+
+/* Мобильные правки для корзины и тостов */
+@media (max-width:640px){
+  .cart-panel{width:100%}
+  .cart-item{flex-wrap:wrap}
+  .cart-item-sum{margin-left:60px}
+  .toasts{left:16px;right:16px;bottom:16px;transform:none;width:auto}
+}

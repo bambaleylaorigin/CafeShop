@@ -17,20 +17,27 @@
         <span class="logo-text">Кофейный <em>котик</em></span>
       </a>
 
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Переключить меню">
+      <div class="nav-right">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Переключить меню">
 
-      <label for="nav-toggle" class="burger" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </label>
+        <label for="nav-toggle" class="burger" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </label>
 
-      <nav class="nav-links" aria-label="Основная навигация">
-        <a class="nav-link" href="#about">О нас</a>
-        <a class="nav-link" href="#menu">Меню</a>
-        <a class="nav-link" href="#promo">Акции</a>
-        <a class="nav-link" href="#bonus">Бонусы</a>
-        <a class="nav-link" href="#contacts">Контакты</a>
-        <a class="nav-link nav-cta" href="#contacts">Забронировать столик</a>
-      </nav>
+        <nav class="nav-links" aria-label="Основная навигация">
+          <a class="nav-link" href="#about">О нас</a>
+          <a class="nav-link" href="#menu">Меню</a>
+          <a class="nav-link" href="#promo">Акции</a>
+          <a class="nav-link" href="#bonus">Бонусы</a>
+          <a class="nav-link" href="#contacts">Контакты</a>
+          <a class="nav-link nav-cta" href="#contacts">Забронировать столик</a>
+        </nav>
+
+        <button class="cart-btn" type="button" id="cart-open" aria-label="Открыть корзину">
+          <span class="cart-btn-ico" aria-hidden="true">🛒</span>
+          <span class="cart-count" id="cart-count" hidden>0</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -120,98 +127,10 @@
           <p>Каждую неделю обжариваем зерно сами и готовим на альтернативном молоке без доплаты.</p>
         </div>
 
-        <div class="menu-grid">
-
-          <article class="drink-card">
-            <div class="drink-visual drink-visual--latte">
-              <span class="drink-badge">Хит продаж</span>
-              <span class="drink-emoji" aria-hidden="true">☕</span>
-            </div>
-            <div class="drink-body">
-              <h3>Мурлыка-латте</h3>
-              <p class="drink-desc">Нежный латте на двойном эспрессо с карамелью и щепоткой корицы.</p>
-              <div class="drink-foot">
-                <span class="price">320<small>₽</small></span>
-                <button class="drink-add" type="button">В заказ</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card">
-            <div class="drink-visual drink-visual--espresso">
-              <span class="drink-badge">Классика</span>
-              <span class="drink-emoji" aria-hidden="true">🍫</span>
-            </div>
-            <div class="drink-body">
-              <h3>Кот-эспрессо</h3>
-              <p class="drink-desc">Плотный двойной эспрессо из бразильской арабики с шоколадным послевкусием.</p>
-              <div class="drink-foot">
-                <span class="price">180<small>₽</small></span>
-                <button class="drink-add" type="button">В заказ</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card">
-            <div class="drink-visual drink-visual--caramel">
-              <span class="drink-badge">Сладкоежкам</span>
-              <span class="drink-emoji" aria-hidden="true">🍮</span>
-            </div>
-            <div class="drink-body">
-              <h3>Карамельный Мурчик</h3>
-              <p class="drink-desc">Капучино с домашней солёной карамелью и хрустящей крошкой печенья.</p>
-              <div class="drink-foot">
-                <span class="price">380<small>₽</small></span>
-                <button class="drink-add" type="button">В заказ</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card">
-            <div class="drink-visual drink-visual--matcha">
-              <span class="drink-badge">Не кофе</span>
-              <span class="drink-emoji" aria-hidden="true">🍵</span>
-            </div>
-            <div class="drink-body">
-              <h3>Матча «Зелёный котик»</h3>
-              <p class="drink-desc">Церемониальная матча на миндальном молоке с ванилью и мёдом.</p>
-              <div class="drink-foot">
-                <span class="price">350<small>₽</small></span>
-                <button class="drink-add" type="button">В заказ</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card">
-            <div class="drink-visual drink-visual--cocoa">
-              <span class="drink-badge">Согревающее</span>
-              <span class="drink-emoji" aria-hidden="true">🧸</span>
-            </div>
-            <div class="drink-body">
-              <h3>Какао «Тёплые лапки»</h3>
-              <p class="drink-desc">Бельгийское какао на цельном молоке с маршмеллоу и капелькой фундука.</p>
-              <div class="drink-foot">
-                <span class="price">300<small>₽</small></span>
-                <button class="drink-add" type="button">В заказ</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card">
-            <div class="drink-visual drink-visual--raf">
-              <span class="drink-badge">Новинка</span>
-              <span class="drink-emoji" aria-hidden="true">☁️</span>
-            </div>
-            <div class="drink-body">
-              <h3>Раф «Пушистое облако»</h3>
-              <p class="drink-desc">Бархатистый раф на сливках с лавандой и белым шоколадом.</p>
-              <div class="drink-foot">
-                <span class="price">370<small>₽</small></span>
-                <button class="drink-add" type="button">В заказ</button>
-              </div>
-            </div>
-          </article>
-
+        <div class="menu-grid" id="menu-grid">
+          <noscript>
+            <p class="menu-fallback">Включите JavaScript, чтобы увидеть меню 🐾</p>
+          </noscript>
         </div>
 
         <p class="menu-note">
@@ -344,9 +263,10 @@
             </div>
 
             <div class="socials">
-              <a class="social-link" href="#" aria-label="Мы в Телеграме">✈️ Telegram</a>
-              <a class="social-link" href="#" aria-label="Мы во ВКонтакте">🅥 ВКонтакте</a>
-              <a class="social-link" href="#" aria-label="Мы в Дзене">📖 Дзен</a>
+              <!-- TODO: замените на реальные профили кофейни -->
+              <a class="social-link" href="https://t.me/" target="_blank" rel="noopener" aria-label="Мы в Телеграме">✈️ Telegram</a>
+              <a class="social-link" href="https://vk.com/" target="_blank" rel="noopener" aria-label="Мы во ВКонтакте">🅥 ВКонтакте</a>
+              <a class="social-link" href="https://dzen.ru/" target="_blank" rel="noopener" aria-label="Мы в Дзене">📖 Дзен</a>
             </div>
           </div>
 
@@ -370,7 +290,7 @@
               <span class="hours-time">до 21:30</span>
             </div>
 
-            <span class="open-badge"><span class="dot" aria-hidden="true"></span> Сейчас открыто</span>
+            <span class="open-badge" id="open-status"><span class="dot" aria-hidden="true"></span><span class="open-badge-text">Сейчас открыто</span></span>
           </aside>
 
         </div>
@@ -378,6 +298,31 @@
     </section>
 
   </main>
+
+  <!-- ==================== КОРЗИНА ==================== -->
+  <div class="cart" id="cart" aria-hidden="true">
+    <div class="cart-backdrop" data-cart-close></div>
+
+    <aside class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="cart-head">
+        <h3 id="cart-title">Ваш заказ</h3>
+        <button class="cart-close" type="button" data-cart-close aria-label="Закрыть корзину">✕</button>
+      </div>
+
+      <p class="cart-empty" id="cart-empty">Пока пусто — добавьте что-нибудь вкусное 🐾</p>
+      <div class="cart-list" id="cart-list" aria-live="polite"></div>
+
+      <div class="cart-foot">
+        <div class="cart-total">
+          <span>Итого</span>
+          <strong id="cart-total">0 ₽</strong>
+        </div>
+        <button class="btn btn-primary cart-checkout" id="cart-checkout" type="button" disabled>Оформить заказ</button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
 
   <!-- ==================== ФУТЕР ==================== -->
   <footer class="footer">
