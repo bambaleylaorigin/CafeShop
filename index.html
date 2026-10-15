@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Кофейный котик — уютная кофейня в Москве. Мурчим от счастья с каждой чашкой. Фирменные напитки, бонусная программа, тёплая атмосфера.">
+  <title>Кофейный котик — уютная кофейня в Москве</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+
+  <!-- ==================== ХЕДЕР ==================== -->
+  <header class="header" id="header">
+    <div class="container nav">
+      <a href="#top" class="logo" aria-label="Кофейный котик — на главную">
+        <span class="logo-mark" aria-hidden="true">🐱</span>
+        <span class="logo-text">Кофейный <em>котик</em></span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Переключить меню">
+
+      <label for="nav-toggle" class="burger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a class="nav-link" href="#about">О нас</a>
+        <a class="nav-link" href="#menu">Меню</a>
+        <a class="nav-link" href="#promo">Акции</a>
+        <a class="nav-link" href="#bonus">Бонусы</a>
+        <a class="nav-link" href="#contacts">Контакты</a>
+        <a class="nav-link nav-cta" href="#contacts">Забронировать столик</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Уютная кофейня в Москве</span>
+          <h1 id="hero-title">Мурчим от счастья<br>с каждой <span class="hl">чашкой</span></h1>
+          <p class="hero-text">
+            Свежеобжаренные зёрна, тёплый свет, мягкие пледы и самый пушистый
+            бариста в городе. Заходите за кофе — останетесь за атмосферой.
+          </p>
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary">Смотреть меню <span aria-hidden="true">☕</span></a>
+            <a href="#contacts" class="btn btn-ghost">Как нас найти</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-circle">
+            <span class="steam s1"></span>
+            <span class="steam s2"></span>
+            <span class="steam s3"></span>
+            <span class="hero-emoji">☕</span>
+          </div>
+          <span class="float f1">🐱</span>
+          <span class="float f2">🐾</span>
+          <span class="float f3">💛</span>
+          <span class="float f4">🐾</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== О НАС ==================== -->
+    <section class="section section-cream" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual" aria-hidden="true">
+            <div class="about-emoji">😻</div>
+            <span class="about-badge">🐾 С 2023 года в Москве</span>
+          </div>
+
+          <div class="about-content">
+            <span class="section-tag">О нас</span>
+            <h2 id="about-title">История, начавшаяся с одного котёнка</h2>
+            <p>
+              Всё началось холодным ноябрьским утром, когда основательница кофейни Аня
+              нашла на пороге маленького рыжего котёнка. Чтобы согреть малыша, она
+              сварила самый большой латте в своей жизни — и поняла, что хочет делиться
+              этим теплом с городом.
+            </p>
+            <p>
+              Так появился <strong>«Кофейный котик»</strong> — место, где зерно обжаривают
+              каждую неделю, десерты пекут по утрам, а гостей встречают по имени.
+              У нас нет спешки: есть мягкие кресла, розетки у каждого стола,
+              настолки и, конечно, <strong>мурчащий хранитель заведения — кот Бублик</strong>.
+            </p>
+
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-num">3 года</div>
+                <div class="stat-label">тёплого уюта</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">25+</div>
+                <div class="stat-label">напитков в меню</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">12 000</div>
+                <div class="stat-label">довольных гостей</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== МЕНЮ ==================== -->
+    <section class="section" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Фирменное меню</span>
+          <h2 id="menu-title">Напитки, за которые хочется мурлыкать</h2>
+          <p>Каждую неделю обжариваем зерно сами и готовим на альтернативном молоке без доплаты.</p>
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="drink-card">
+            <div class="drink-visual drink-visual--latte">
+              <span class="drink-badge">Хит продаж</span>
+              <span class="drink-emoji" aria-hidden="true">☕</span>
+            </div>
+            <div class="drink-body">
+              <h3>Мурлыка-латте</h3>
+              <p class="drink-desc">Нежный латте на двойном эспрессо с карамелью и щепоткой корицы.</p>
+              <div class="drink-foot">
+                <span class="price">320<small>₽</small></span>
+                <button class="drink-add" type="button">В заказ</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="drink-card">
+            <div class="drink-visual drink-visual--espresso">
+              <span class="drink-badge">Классика</span>
+              <span class="drink-emoji" aria-hidden="true">🍫</span>
+            </div>
+            <div class="drink-body">
+              <h3>Кот-эспрессо</h3>
+              <p class="drink-desc">Плотный двойной эспрессо из бразильской арабики с шоколадным послевкусием.</p>
+              <div class="drink-foot">
+                <span class="price">180<small>₽</small></span>
+                <button class="drink-add" type="button">В заказ</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="drink-card">
+            <div class="drink-visual drink-visual--caramel">
+              <span class="drink-badge">Сладкоежкам</span>
+              <span class="drink-emoji" aria-hidden="true">🍮</span>
+            </div>
+            <div class="drink-body">
+              <h3>Карамельный Мурчик</h3>
+              <p class="drink-desc">Капучино с домашней солёной карамелью и хрустящей крошкой печенья.</p>
+              <div class="drink-foot">
+                <span class="price">380<small>₽</small></span>
+                <button class="drink-add" type="button">В заказ</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="drink-card">
+            <div class="drink-visual drink-visual--matcha">
+              <span class="drink-badge">Не кофе</span>
+              <span class="drink-emoji" aria-hidden="true">🍵</span>
+            </div>
+            <div class="drink-body">
+              <h3>Матча «Зелёный котик»</h3>
+              <p class="drink-desc">Церемониальная матча на миндальном молоке с ванилью и мёдом.</p>
+              <div class="drink-foot">
+                <span class="price">350<small>₽</small></span>
+                <button class="drink-add" type="button">В заказ</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="drink-card">
+            <div class="drink-visual drink-visual--cocoa">
+              <span class="drink-badge">Согревающее</span>
+              <span class="drink-emoji" aria-hidden="true">🧸</span>
+            </div>
+            <div class="drink-body">
+              <h3>Какао «Тёплые лапки»</h3>
+              <p class="drink-desc">Бельгийское какао на цельном молоке с маршмеллоу и капелькой фундука.</p>
+              <div class="drink-foot">
+                <span class="price">300<small>₽</small></span>
+                <button class="drink-add" type="button">В заказ</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="drink-card">
+            <div class="drink-visual drink-visual--raf">
+              <span class="drink-badge">Новинка</span>
+              <span class="drink-emoji" aria-hidden="true">☁️</span>
+            </div>
+            <div class="drink-body">
+              <h3>Раф «Пушистое облако»</h3>
+              <p class="drink-desc">Бархатистый раф на сливках с лавандой и белым шоколадом.</p>
+              <div class="drink-foot">
+                <span class="price">370<small>₽</small></span>
+                <button class="drink-add" type="button">В заказ</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="menu-note">
+          Полное меню — на кассе. Любой напиток можно сделать на <a href="#contacts">растительном молоке</a> без доплаты.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== АКЦИИ ==================== -->
+    <section class="section section-beige" id="promo" aria-labelledby="promo-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Акции</span>
+          <h2 id="promo-title">Приятности для своих</h2>
+          <p>Мы любим баловать гостей — следите за обновлениями в наших соцсетях.</p>
+        </div>
+
+        <div class="promo-grid">
+
+          <article class="promo-card">
+            <div class="promo-icon" aria-hidden="true">🌅</div>
+            <h3>Счастливые часы</h3>
+            <p>Скидка 20% на все напитки по будням с 8:00 до 11:00. Идеально для ранних студентов и жаворонков.</p>
+            <span class="promo-tag">−20% до 11:00</span>
+          </article>
+
+          <article class="promo-card">
+            <div class="promo-icon" aria-hidden="true">🤝</div>
+            <h3>Приведи друга</h3>
+            <p>Приходите вдвоём — второй напиток в подарок. Просто скажите бариста кодовое слово «Мур».</p>
+            <span class="promo-tag">2-й напиток в подарок</span>
+          </article>
+
+          <article class="promo-card">
+            <div class="promo-icon" aria-hidden="true">🎓</div>
+            <h3>Студенческий мур</h3>
+            <p>Скидка 15% на всё меню по студенческому билету. Действует ежедневно до 18:00.</p>
+            <span class="promo-tag">−15% для студентов</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== БОНУСНАЯ ПРОГРАММА ==================== -->
+    <section class="section section-bonus" id="bonus" aria-labelledby="bonus-title">
+      <div class="container">
+        <div class="bonus-panel">
+          <div class="bonus-head">
+            <span class="bonus-head-emoji" aria-hidden="true">🎁</span>
+            <h2 id="bonus-title">Бонусная программа «Клубок»</h2>
+          </div>
+          <p class="bonus-intro">
+            Копите бонусы с каждой покупки и обменивайте их на любимые напитки.
+            Никаких пластиковых карт — всё привязано к вашему номеру телефона.
+          </p>
+
+          <div class="bonus-steps">
+            <div class="bonus-step">
+              <div class="bonus-step-num">1</div>
+              <h3>Регистрируйтесь</h3>
+              <p>Скажите номер телефона на кассе — и получите 100 приветственных бонусов сразу.</p>
+            </div>
+            <div class="bonus-step">
+              <div class="bonus-step-num">2</div>
+              <h3>Копите</h3>
+              <p>5% от суммы чека возвращается бонусами. 1 бонус = 1 рубль скидки.</p>
+            </div>
+            <div class="bonus-step">
+              <div class="bonus-step-num">3</div>
+              <h3>Тратьте</h3>
+              <p>Оплачивайте бонусами до 50% суммы заказа — на любые напитки и десерты.</p>
+            </div>
+            <div class="bonus-step">
+              <div class="bonus-step-num">4</div>
+              <h3>Празднуйте</h3>
+              <p>В день рождения дарим двойные бонусы и бесплатный десерт к кофе.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== КОНТАКТЫ ==================== -->
+    <section class="section section-cream" id="contacts" aria-labelledby="contacts-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Контакты</span>
+          <h2 id="contacts-title">Заходите в гости</h2>
+          <p>Мы в пяти минутах от метро, с мягкими диванами и розетками у каждого стола.</p>
+        </div>
+
+        <div class="contacts-grid">
+
+          <div class="contact-card">
+            <div class="contact-list">
+
+              <div class="contact-item">
+                <span class="contact-ico" aria-hidden="true">📍</span>
+                <div>
+                  <h3>Адрес</h3>
+                  <p>г. Москва, ул. Большая Котляковская, 12, стр. 1<br>5 минут пешком от м. Добрынинская</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-ico" aria-hidden="true">📞</span>
+                <div>
+                  <h3>Телефон</h3>
+                  <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-ico" aria-hidden="true">✉️</span>
+                <div>
+                  <h3>Почта</h3>
+                  <p><a href="mailto:meow@coffeecat.ru">meow@coffeecat.ru</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-ico" aria-hidden="true">🐱</span>
+                <div>
+                  <h3>Хранитель заведения</h3>
+                  <p>Кот Бублик — принимает поглаживания ежедневно</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="socials">
+              <a class="social-link" href="#" aria-label="Мы в Телеграме">✈️ Telegram</a>
+              <a class="social-link" href="#" aria-label="Мы во ВКонтакте">🅥 ВКонтакте</a>
+              <a class="social-link" href="#" aria-label="Мы в Дзене">📖 Дзен</a>
+            </div>
+          </div>
+
+          <aside class="hours-card" aria-labelledby="hours-title">
+            <h3 id="hours-title"><span aria-hidden="true">🕐</span> График работы</h3>
+
+            <div class="hours-row">
+              <span class="hours-day">Понедельник — Пятница</span>
+              <span class="hours-time">8:00 — 22:00</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Суббота</span>
+              <span class="hours-time">9:00 — 23:00</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Воскресенье</span>
+              <span class="hours-time">9:00 — 23:00</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Кухня и десерты</span>
+              <span class="hours-time">до 21:30</span>
+            </div>
+
+            <span class="open-badge"><span class="dot" aria-hidden="true"></span> Сейчас открыто</span>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== ФУТЕР ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#top" class="logo">
+          <span class="logo-mark" aria-hidden="true">🐱</span>
+          <span class="logo-text">Кофейный <em>котик</em></span>
+        </a>
+
+        <nav class="footer-nav" aria-label="Навигация в подвале">
+          <a href="#about">О нас</a>
+          <a href="#menu">Меню</a>
+          <a href="#promo">Акции</a>
+          <a href="#bonus">Бонусы</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Кофейный котик. Варим с любовью в Москве.</span>
+        <span>Сделано с 🐾 и большим количеством кофеина</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
