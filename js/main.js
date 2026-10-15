@@ -58,8 +58,8 @@
      3. Меню: данные — единый источник правды
      ---------------------------------------------------------- */
   const MENU = [
-    { id: 'murlyka-latte', name: 'Мурлыка-латте', price: 320, badge: 'Хит продаж', emoji: '☕', theme: 'latte', desc: 'Нежный латте на двойном эспрессо с карамелью и щепоткой корицы.' },
-    { id: 'kot-espresso', name: 'Кот-эспрессо', price: 180, badge: 'Классика', emoji: '🍫', theme: 'espresso', desc: 'Плотный двойной эспрессо из бразильской арабики с шоколадным послевкусием.' },
+    { id: 'murlyka-latte', name: 'Мурлыка-латте', price: 320, badge: 'Хит продаж', emoji: '☕', photo: 'photos/Мурлыка-латте.png', theme: 'latte', desc: 'Нежный латте на двойном эспрессо с карамелью и щепоткой корицы.' },
+    { id: 'kot-espresso', name: 'Кот-эспрессо', price: 180, badge: 'Классика', emoji: '🍫', photo: 'photos/Кот-эспрессо.png', theme: 'espresso', desc: 'Плотный двойной эспрессо из бразильской арабики с шоколадным послевкусием.' },
     { id: 'karamel-murchik', name: 'Карамельный Мурчик', price: 380, badge: 'Сладкоежкам', emoji: '🍮', theme: 'caramel', desc: 'Капучино с домашней солёной карамелью и хрустящей крошкой печенья.' },
     { id: 'matcha', name: 'Матча «Зелёный котик»', price: 350, badge: 'Не кофе', emoji: '🍵', theme: 'matcha', desc: 'Церемониальная матча на миндальном молоке с ванилью и мёдом.' },
     { id: 'kakao', name: 'Какао «Тёплые лапки»', price: 300, badge: 'Согревающее', emoji: '🧸', theme: 'cocoa', desc: 'Бельгийское какао на цельном молоке с маршмеллоу и капелькой фундука.' },
@@ -73,7 +73,9 @@
       <article class="drink-card">
         <div class="drink-visual drink-visual--${item.theme}">
           <span class="drink-badge">${item.badge}</span>
-          <span class="drink-emoji" aria-hidden="true">${item.emoji}</span>
+          ${item.photo
+            ? `<img class="drink-emoji drink-photo" src="${item.photo}" alt="${item.name}" loading="lazy">`
+            : `<span class="drink-emoji" aria-hidden="true">${item.emoji}</span>`}
         </div>
         <div class="drink-body">
           <h3>${item.name}</h3>

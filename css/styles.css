@@ -493,13 +493,15 @@ body::before{
   border-radius:50%;
   background:radial-gradient(circle, rgba(230,168,108,.35), rgba(230,168,108,0) 70%);
 }
-.about-emoji{
+.about-photo{
   position:relative;
-  font-size:110px;
-  line-height:1;
-  margin-bottom:16px;
-  filter:drop-shadow(0 12px 18px rgba(111,78,55,.22));
-  animation:floaty 6.5s ease-in-out infinite;
+  z-index:1;
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  display:block;
+  border-radius:calc(var(--radius) - 10px);
+  box-shadow:0 16px 34px rgba(74,52,40,.24), inset 0 1px 0 rgba(255,255,255,.5);
 }
 .about-badge{
   position:relative;
@@ -513,6 +515,7 @@ body::before{
   font-weight:700;
   padding:10px 20px;
   border-radius:999px;
+  margin-top:20px;
   box-shadow:0 8px 20px rgba(111,78,55,.12);
 }
 
@@ -597,6 +600,15 @@ body::before{
   transition:transform .45s cubic-bezier(.2,.8,.2,1);
 }
 .drink-card:hover .drink-emoji{transform:scale(1.14) rotate(-7deg)}
+
+/* Фото вместо эмодзи в карточках напитков */
+.drink-photo{
+  width:120px;height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid rgba(255,255,255,.55);
+  box-shadow:0 14px 28px rgba(74,52,40,.32);
+}
 
 /* Цветовые темы карточек напитков (заменяют инлайн --c1/--c2) */
 .drink-visual--latte{--c1:#F9E9D5;--c2:#E3C7A2}
@@ -1127,7 +1139,7 @@ body::before{
   .f4{display:none}
 
   .about-visual{padding:34px 24px}
-  .about-emoji{font-size:84px}
+  .about-photo{aspect-ratio:1/1}
   .stats{grid-template-columns:1fr;gap:20px;text-align:center}
 
   .menu-grid{grid-template-columns:1fr;gap:20px}
